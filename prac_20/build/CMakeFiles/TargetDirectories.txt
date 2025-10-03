@@ -1,4 +1,0 @@
-/home/hduser/Desktop/Docker/prac_20/build/CMakeFiles/server.dir
-/home/hduser/Desktop/Docker/prac_20/build/CMakeFiles/client.dir
-/home/hduser/Desktop/Docker/prac_20/build/CMakeFiles/edit_cache.dir
-/home/hduser/Desktop/Docker/prac_20/build/CMakeFiles/rebuild_cache.dir
