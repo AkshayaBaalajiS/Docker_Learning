@@ -1,0 +1,21 @@
+1️⃣ Create a top-level CMakeLists.txt
+
+This must:
+
+set minimum version
+
+set project name
+
+add include/ to include paths
+
+add the src/ folder using add_subdirectory(src)
+
+2️⃣ Create a src/CMakeLists.txt
+
+Inside src/CMakeLists.txt, you must:
+
+collect .cpp files
+
+create executable app
+
+use the include directory defined from top-level
