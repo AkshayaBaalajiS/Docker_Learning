@@ -6,6 +6,8 @@ WORKDIR /work
 
 COPY . . 
 
+ENV user=Baaalaji
+
 RUN bash  script.sh
 
 RUN mkdir prac_9/build && cd prac_9/build && cmake .. && make 
