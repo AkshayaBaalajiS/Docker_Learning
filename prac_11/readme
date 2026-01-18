@@ -1,0 +1,45 @@
+This practice teaches you:
+
+How users control features from the command line
+
+How option() connects to PUBLIC / PRIVATE / INTERFACE
+
+How real projects enable/disable features without touching code
+
+
+Users can override the default value from the command line using the -D flag:
+
+cmake -DBUILD_TESTING=OFF
+
+Default options command on cmake 
+
+option(<variable> "help string" [initial_value])
+
+Here’s what each parameter represents:
+
+<variable>: This is the name of the option variable. This variable is created and can be used throughout the CMakeLists.txt file to control the project’s behavior conditionally.
+
+"help string": This is a brief description of the option. This string is displayed to users when they run CMake and configure the project.
+
+[initial_value]: This optional initial value is assigned to the option variable. By default, the initial value is OFF. If the user doesn’t specify the value, the option variable will have this initial value.
+
+
+
+parent cmake 
+options(ENABLE_LOG "Message" ON/OFF) // third arg is initial value // sec is mess // first is macro 
+
+
+
+Child cmkae ------------------------------------
+if(ENABLE_LOG)
+target_compile_definitions(features PUBLIC ENABLE_LOG)
+endif(ENABLE_LOG)
+
+if(ENABLE_DEBUG)
+target_compile_definitions(features PUBLIC ENABLE_DEBUG)
+endif(ENABLE_DEBUG)
+
+
+
+on terminal ------------------------------------
+cmake -D ENABLE_LOG=OFF ENABLE_DEBUG=ON
