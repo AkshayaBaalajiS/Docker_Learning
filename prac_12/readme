@@ -1,0 +1,25 @@
+RUN vs CMD on ENV varaible usage 
+
+
+
+🔍 Why RUN works but CMD doesn’t
+Your RUN line:
+RUN cd ${DIR_NAME} && mkdir build && cd build && cmake .. && make
+
+
+RUN is executed as:
+
+/bin/sh -c "cd ${DIR_NAME} && ..."
+
+
+➡️ Shell exists
+➡️ Shell expands ${DIR_NAME}
+➡️ Works ✅
+
+Your CMD line:
+CMD ["./${DIR_NAME}/build/output"]
+
+
+➡️ No shell
+➡️ No expansion
+➡️ Fails ❌
