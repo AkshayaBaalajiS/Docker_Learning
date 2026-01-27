@@ -1,0 +1,3 @@
+for tar 
+
+docker save image_name -o image_name.tar
